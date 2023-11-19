@@ -52,7 +52,7 @@
 	gap: 2%;
 }
 
-.personalTips{
+.personalTips, .personalTips2{
 	flex: calc(25% - 2 * 2%);
 	border: 2px solid orangered;
 	padding: 5px;
@@ -60,18 +60,6 @@
 	padding-right: 15px;
 	border-radius: 15px;
 	box-sizing: border-box;
-	margin: 1%;
-
-}
-
-.personalTips2{
-	flex: calc(25% - 2 * 2%);
-	border: 2px solid orangered;
-	padding: 5px;
-	padding-left: 10px;
-	padding-right: 15px;
-	border-radius: 15px;
-	box-sizing: content-box;
 	margin: 1%;
 
 }
@@ -160,7 +148,7 @@ img{
 .header {
 	background-color: black;
 	box-sizing: border-box;
-	height: 22%;
+	height: 23%;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -228,4 +216,41 @@ img{
 	font-style: italic;
 	font-weight: bold;
 	color: orangered;
+}
+
+@media (max-width: 490px){
+	body{
+		margin-top: 1vh;
+		font-size: 70%;
+	}
+
+	.header{
+		height: 250%;
+		position: static;
+		border: none;
+
+	}
+
+	.header h1{
+		font-size: 250%;
+	}
+
+	.personalTips,.personalTips2{
+		display: flex;
+		flex-direction: column;
+		margin-top: 1vh;
+		margin-bottom: 1vh;
+		flex: unset;
+	}
+	.content h2{
+		margin-bottom: 3vh;
+		margin-top: 2vh;
+	}
+	#wildfireImage, #vehiclesImage {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		flex: unset;
+/*		width: 100%;*/
+	}
 }
